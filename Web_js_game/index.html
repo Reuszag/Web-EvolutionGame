@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MERGE JS TERMINAL</title>
+  <link rel="stylesheet" href="arcade-style.css">
+</head>
+<body>
+  <div id="startScreen">
+    <h1>MERGE JavaScript Game</h1>
+    <form id="startForm">
+      <label for="playerName">Player Name:</label>
+      <input type="text" id="playerName"><br>
+      <small id="nameError" class="hidden">Player name is required.</small><br><br>
+      <label for="difficulty">Select Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy (4x4)</option>
+        <option value="medium">Medium (6x6)</option>
+        <option value="hard">Hard (8x8)</option>
+      </select><br><br>
+      <button type="submit">Start Game</button>
+    </form>
+  </div>
+  <div id="gameScreen" class="hidden">
+    <h2 id="welcomeText"></h2>
+    <div id="timer"></div>
+    <div id="gameControls"></div>
+    <div id="gameBoard"></div>
+    <div id="notification" class="notification hidden"></div>
+  </div>
+  <div id="gameOverScreen" class="hidden">
+    <h2>Time's up!</h2>
+    <button id="backToStartBtn">Back to Start</button>
+    <button id="restartGameBtn">Restart Game</button>
+  </div>
+  <script src="evolutions.js"></script>
+  <script src="start.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
